@@ -16,5 +16,11 @@ $(TARGET): $(SRC)
 clean:
 	rm -f $(TARGET)
 
-run: $(TARGET)
-	./$(TARGET)
+run: 
+	./$(TARGET) $(filter-out $@,$(MAKECMDGOALS))
+
+%:
+	@:
+
+
+

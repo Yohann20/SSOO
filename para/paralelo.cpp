@@ -18,9 +18,9 @@ void VerFilas(Mat& image, Mat& grayImage, int startRow, int endRow) {
 
 int main(int argc, char*argv[]) {
 
-        string Imagen = argv[1];
-        string ImagenSalida = argv[2];
-        int numThreads = atoi(argv[3]);
+    string Imagen = argv[1];
+    string ImagenSalida = argv[2];
+    int numThreads = atoi(argv[3]);
 
 
     Mat image = imread(Imagen, IMREAD_COLOR);
@@ -52,7 +52,7 @@ int main(int argc, char*argv[]) {
     auto stop = chrono::high_resolution_clock::now();
     auto duration = chrono::duration_cast<chrono::seconds>(stop - start);
 
-    cout << "Tiempo de ejecución: " << duration.count() << " Segundos " << endl;
+    cout << "Tiempo de ejecución: " << duration.count() << " Milisegundos" << endl;
 
     imwrite(ImagenSalida, grayImage);
 

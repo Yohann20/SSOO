@@ -45,7 +45,7 @@ int main(int argc, char *argv[]) {
     auto stop = chrono::high_resolution_clock::now();
     auto duration = chrono::duration_cast<chrono::milliseconds>(stop - start);
 
-    cout << "Tiempo de ejecución: " << duration.count() << " MIlisegundos " << endl;
+    cout << "Tiempo de ejecución: " << duration.count() << " Milisegundos " << endl;
 
     imwrite(ImagenSalida, grayImage);
 
